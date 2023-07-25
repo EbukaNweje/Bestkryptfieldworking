@@ -49,6 +49,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/templates/bit_gold/frontee/css/vendors/uikit.min.css">
     <link rel="stylesheet" href="assets/templates/bit_gold/frontee/css/style.css">
+    <link rel="stylesheet" href="./css/Eze.css">
 </head>
 <body>
       <!-- account section start -->
@@ -72,25 +73,29 @@
                                       <p class="uk-text-lead uk-margin-top uk-margin-remove-bottom">Open an account</p>
                                       <p class="uk-text-small uk-margin-remove-top uk-margin-medium-bottom">Already have an Account? <a href="login.html">Login here</a></p>
                                       <!-- login form begin -->
-                                      <form class="uk-grid uk-form" action="https://app.Bestkryptfieldd-assets.com/register" onsubmit="return submitUserForm();" method="post">
-                                        <input type="hidden" name="_token" value="haTHTASVdwYYCZtOnUddfxKU4WjktNLNsz0UIllw">                                                                                  <div class="uk-margin-small uk-width-1-1 uk-inline">
+                                      <form class="uk-grid uk-form">
+                                        <input type="hidden" name="_token" value="haTHTASVdwYYCZtOnUddfxKU4WjktNLNsz0UIllw"><div class="uk-margin-small uk-width-1-1 uk-inline">
                                               <span class="uk-form-icon uk-form-icon-flip fas fa-user fa-sm"></span>
-                                              <input class="uk-input uk-border-rounded" type="text" name="firstname" value="" placeholder="First Name" required>
+                                              <input class="uk-input uk-border-rounded" id="FirstName" type="text" name="firstname" placeholder="First Name">
                                           </div>
                                           <div class="uk-margin-small uk-width-1-1 uk-inline">
                                               <span class="uk-form-icon uk-form-icon-flip fas fa-user fa-sm"></span>
-                                              <input class="uk-input uk-border-rounded" type="text" name="lastname" value="" placeholder="Last Name" required>
+                                              <input class="uk-input LastName uk-border-rounded" type="text" name="lastname" placeholder="Last Name">
                                           </div>
                                           <div class="uk-margin-small uk-width-1-1 uk-inline">
                                               <span class="uk-form-icon uk-form-icon-flip fas fa-user fa-sm"></span>
-                                              <input class="uk-input uk-border-rounded" type="text" name="username"  value="" placeholder="User Name" required>
+                                              <input class="uk-input username uk-border-rounded" type="text" name="username"  placeholder="User Name">
                                           </div>
                                           <div class="uk-margin-small uk-width-1-1 uk-inline">
                                               <span class="uk-form-icon uk-form-icon-flip fas fa-envelope fa-sm"></span>
-                                              <input class="uk-input uk-border-rounded" type="email" name="email"  value="" placeholder="Enter email address" required>
+                                              <input class="uk-input Email uk-border-rounded" type="email" name="email"  placeholder="Enter email address">
                                           </div>
                                           <div class="uk-margin-small uk-width-1-1 uk-inline">
-                                            <select name="country" id="country" class="uk-input uk-border-rounded">
+                                              <span class="uk-form-icon uk-form-icon-flip fas fa-envelope fa-sm"></span>
+                                              <input class="uk-input retryEmail uk-border-rounded" type="email" name="email"  placeholder="Retry email address">
+                                          </div>
+                                          <div class="uk-margin-small uk-width-1-1 uk-inline">
+                                            <select name="country" id="country" class="uk-input uk-border-rounded Seletor" >
                                                                                                 <option data-mobile_code="93" value="Afghanistan" data-code="AF">Afghanistan</option>
                                                                                                 <option data-mobile_code="358" value="Aland Islands" data-code="AX">Aland Islands</option>
                                                                                                 <option data-mobile_code="355" value="Albania" data-code="AL">Albania</option>
@@ -337,35 +342,35 @@
                                         </div>
                                           <div class="uk-grid-small uk-margin-small uk-grid" >
                                             <div class="uk-width-1-4@s uk-inline">
-                                                <input class="uk-input uk-border-rounded" name="mobile_code" placeholder="+93" required>
+                                                <input class="uk-input MobileCode uk-border-rounded" name="mobile_code" placeholder="+93" >
                                             </div>
                                             <div class="uk-width-3-4@s uk-inline ">
                                                 <span class="uk-form-icon uk-form-icon-flip fas fa-phone fa-sm"></span>
-                                                <input class="uk-input uk-border-rounded " type="text" name="mobile"  value="" placeholder="Your Phone Number" required>
+                                                <input class="uk-input uk-border-rounded PhoneNumber" type="text" name="mobile"  placeholder="Your Phone Number">
                                             </div>
                                         </div>
                                           <div class="uk-margin-small uk-width-1-1 uk-inline">
                                               <span class="uk-form-icon uk-form-icon-flip fas fa-lock fa-sm"></span>
-                                              <input class="uk-input uk-border-rounded" type="password" name="password"  placeholder="Enter password" required>
+                                              <input class="uk-input uk-border-rounded Password" type="password" name="password"  placeholder="Enter password">
                                           </div>
                                           <div class="uk-margin-small uk-width-1-1 uk-inline">
                                               <span class="uk-form-icon uk-form-icon-flip fas fa-lock fa-sm"></span>
-                                              <input class="uk-input uk-border-rounded" type="password" name="password_confirmation"  placeholder="Confirm Password" required>
+                                              <input class="uk-input uk-border-rounded confirmationPassWord" type="password" name="password_confirmation"  placeholder="Confirm Password">
                                           </div>
                                           <div class="form-group d-flex justify-content-center">
                                                                                       </div>
                                           <div class="form-group">
-        <link href="https://fonts.googleapis.com/css?family=Henny+Penny&amp;display=swap" rel="stylesheet"><div style="height: 46px; line-height: 46px; width:100%; text-align: center; background-color: #003; color: #5497cc!important; font-size: 26px; font-weight: bold; letter-spacing: 20px; font-family: 'Henny Penny', cursive;  -webkit-user-select: none; -moz-user-select: none;-ms-user-select: none;user-select: none;  display: flex; justify-content: center;" class="captcha"><span style="    float:left;     -webkit-transform: rotate(54deg);">4</span><span style="    float:left;     -webkit-transform: rotate(-17deg);">6</span><span style="    float:left;     -webkit-transform: rotate(27deg);">7</span><span style="    float:left;     -webkit-transform: rotate(-14deg);">0</span><span style="    float:left;     -webkit-transform: rotate(-55deg);">9</span><span style="    float:left;     -webkit-transform: rotate(51deg);">6</span></div><input type="hidden" name="captcha_secret" value="66b8462edf3eda7c4668ad40c5449c84ede0aff6240e0e64128f7f752f0aec0e">    </div>
+        <link href="https://fonts.googleapis.com/css?family=Henny+Penny&amp;display=swap" rel="stylesheet"><div style="height: 46px; line-height: 46px; width:100%; text-align: center; background-color: #003; color: #5497cc!important; font-size: 26px; font-weight: bold; letter-spacing: 20px; font-family: 'Henny Penny', cursive;  -webkit-user-select: none; -moz-user-select: none;-ms-user-select: none;user-select: none;  display: flex; justify-content: center;" class="captcha"><span style="    float:left; ">4</span><span style="    float:left; ">6</span><span style="    float:left;  ">7</span><span style="    float:left;">0</span><span style="    float:left;">9</span><span style="    float:left; ">6</span></div><input type="hidden" name="captcha_secret" value="66b8462edf3eda7c4668ad40c5449c84ede0aff6240e0e64128f7f752f0aec0e">    </div>
 
 
     <div class="form-group uk-margin-small uk-width-1-1 uk-inline">
-        <input type="text" name="captcha" class="form-control uk-input uk-border-rounded" placeholder="Enter code" autocomplete="off" required>
+        <input type="text" name="captcha" class=" captchaBox uk-input uk-border-rounded" placeholder="Enter code" autocomplete="off">
     </div>
 
 
                                           
                                           <div class="uk-margin-small uk-width-auto uk-text-small">
-                                              <label><input class="uk-checkbox uk-border-rounded" type="checkbox" name="terms" required> I agree with <a href="../www.Bestkryptfieldd-assets.com/legal-docs.html"> Terms and Policy</a></label>
+                                              <label><input class=" check uk-checkbox uk-border-rounded" type="checkbox" name="terms"> I agree with <a href="../www.Bestkryptfieldd-assets.com/legal-docs.html"> Terms and Policy</a></label>
                                           </div>
                                           <div class="uk-margin-small uk-width-1-1">
                                               <button class="uk-button uk-width-1-1 uk-button-secondary uk-border-rounded uk-float-left" type="submit" name="submit">Sign in</button>
@@ -380,12 +385,20 @@
                   </div>
               </div>
           </div>
+
+          <div class="Erorr">
+            <div class="ErrorCard">
+                <span class="ErorrText"></span>
+                <button class="ErorrBoxClose">Close</button>
+            </div>
+          </div>
           <!-- section content end -->
       </main>
       <!-- Javascript -->
-<script src="assets/templates/bit_gold/frontee/js/vendors/uikit.min.js"></script>
-      <script src="assets/templates/bit_gold/frontee/js/vendors/indonez.min.js"></script>
-  </body>
+    <script src="./js/Myjs/App.js"></script>
+
+   <!-- <script src="assets/templates/bit_gold/frontee/js/vendors/uikit.min.js"></script>
+      <script src="assets/templates/bit_gold/frontee/js/vendors/indonez.min.js"></script> -->
     <!--Modified section end-->
 
 
@@ -395,17 +408,17 @@
   <script src="assets/templates/bit_gold/js/vendor/bootstrap.bundle.min.js"></script>
 
     <!-- slick slider js -->
-  <script src="assets/templates/bit_gold/js/vendor/slick.min.js"></script>
-  <script src="assets/templates/bit_gold/js/vendor/wow.min.js"></script>
+  <!-- <script src="assets/templates/bit_gold/js/vendor/slick.min.js"></script> -->
+  <!-- <script src="assets/templates/bit_gold/js/vendor/wow.min.js"></script> -->
   <!-- dashboard custom js -->
-  <script src="assets/templates/bit_gold/js/app.js"></script>
+  <!-- <script src="assets/templates/bit_gold/js/app.js"></script> -->
 
 
   <link rel="stylesheet" href="assets/templates/bit_gold/css/iziToast.min.css">
 <script src="assets/templates/bit_gold/js/iziToast.min.js"></script>
 
 
-<script>
+<!-- <script>
 "use strict";
     function notify(status,message) {
         iziToast[status]({
@@ -413,8 +426,8 @@
             position: "topRight"
         });
     }
-</script>
-      <script>
+</script> -->
+      <!-- <script>
       "use strict";
                     $(`option[data-code=NG]`).attr('selected','');
           
@@ -424,21 +437,21 @@
           });
           $('input[name=mobile_code]').val($('select[name=country] :selected').data('mobile_code'));
           $('.mobile-code').text('+'+$('select[name=country] :selected').data('mobile_code'));
-        function submitUserForm() {
-            var response = grecaptcha.getResponse();
-            if (response.length == 0) {
-                document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">Captcha field is required.</span>';
-                return false;
-            }
-            return true;
-        }
+        // function submitUserForm() {
+        //     var response = grecaptcha.getResponse();
+        //     if (response.length == 0) {
+        //         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">Captcha field is required.</span>';
+        //         return false;
+        //     }
+        //     return true;
+        // }
 
         function verifyCaptcha() {
             document.getElementById('g-recaptcha-error').innerHTML = '';
         }
-    </script>
+    </script> -->
 
-<script>
+<!-- <script>
     (function () {
         "use strict";
         $(document).on("change", ".langSel", function () {
@@ -448,7 +461,7 @@
         $('.policy').on('click',function(){
             $.ajaxSetup({
                 headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    'X-CSRF-TOK EN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
             $.get('cookie/accept.json', function(response){
@@ -457,7 +470,7 @@
             });
         });
     })();
-</script>
+</script> -->
 </body>
 
 <!-- Mirrored from app.Bestkryptfieldd-assets.com/register by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Jun 2023 11:05:42 GMT -->

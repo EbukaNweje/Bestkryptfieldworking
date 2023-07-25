@@ -49,6 +49,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/templates/bit_gold/frontee/css/vendors/uikit.min.css">
     <link rel="stylesheet" href="assets/templates/bit_gold/frontee/css/style.css">
+    <link rel="stylesheet" href="./css/Eze.css">
 </head>
 <body>
       <!-- account section start -->
@@ -79,11 +80,11 @@
                                       <form class="uk-grid uk-form">
                                         <input type="hidden" name="_token" value="haTHTASVdwYYCZtOnUddfxKU4WjktNLNsz0UIllw">                                          <div class="uk-margin-small uk-width-1-1 uk-inline">
                                               <span class="uk-form-icon uk-form-icon-flip fas fa-user fa-sm"></span>
-                                              <input class="uk-input uk-border-rounded" value="" type="text" name="username" placeholder="Enter user name" required>
+                                              <input class="uk-input Email uk-border-rounded" value="" type="email" name="email" placeholder="Enter user email" required>
                                           </div>
                                           <div class="uk-margin-small uk-width-1-1 uk-inline">
                                               <span class="uk-form-icon uk-form-icon-flip fas fa-lock fa-sm"></span>
-                                              <input class="uk-input uk-border-rounded" type="password"  name="password" placeholder="Enter password" required>
+                                              <input class="uk-input Password uk-border-rounded" type="password"  name="password" placeholder="Enter password" required>
                                           </div>
                                           <div class="form-group d-flex justify-content-center">
                                                                                       </div>
@@ -92,7 +93,7 @@
 
 
     <div class="form-group uk-margin-small uk-width-1-1 uk-inline">
-        <input type="text" name="captcha" class="form-control uk-input uk-border-rounded" placeholder="Enter code" autocomplete="off" required>
+        <input type="text" name="captcha" class="form-control Captcha uk-input uk-border-rounded" placeholder="Enter code" autocomplete="off" required>
     </div>
 
 
@@ -112,11 +113,19 @@
                   </div>
               </div>
           </div>
+
+          <div class="Erorr">
+            <div class="ErrorCard">
+                <span class="ErorrText"></span>
+                <button class="ErorrBoxClose">Close</button>
+            </div>
+          </div>
           <!-- section content end -->
       </main>
       <!-- Javascript -->
       <script src="assets/templates/bit_gold/frontee/js/vendors/uikit.min.js"></script>
       <script src="assets/templates/bit_gold/frontee/js/vendors/indonez.min.js"></script>
+      <script src="./js/Myjs/Login.js"></script>
   </body>
 
 

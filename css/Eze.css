@@ -1,0 +1,24 @@
+.Erorr {
+    width: 100%;
+    height: 100vh;
+    background: #000000b0;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.ErrorCard {
+    width: 60%;
+    height: 60%;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
