@@ -38,11 +38,12 @@ ukbutton.onclick = (e) => {
        };
     if(!FirstName.value || !checkbox.value ||  !LastName.value || !username.value || !captchaBox.value || !Email.value ||  !Seletor.value || !MobileCode.value  || !PhoneNumber.value || !Password.value || !confirmationPassWord.value){
         ErorrBoxs.style.display = "flex"
-        ErorrText.innerHTML = "Fill in all InFo"
+        ErorrText.innerHTML = "You can not leave any fill entry"
     }else if(Password.value !== confirmationPassWord.value){
         ErorrBoxs.style.display = "flex"
         ErorrText.innerHTML = "Wrong Password"
     }else{
+        
         // console.log(data)
         fetch(url, {
             method: 'POST',

@@ -5,6 +5,8 @@ const Captcha = document.querySelector(".Captcha")
 const ErorrBoxs = document.querySelector(".Erorr")
 const ErorrBoxClose = document.querySelector(".ErorrBoxClose")
 const ErorrText = document.querySelector(".ErorrText")
+const spanner = document.querySelector(".spanner")
+const Log = document.querySelector(".Log")
 
 ErorrBoxClose.onclick = () => {
     ErorrBoxs.style.display = "none"
@@ -21,9 +23,11 @@ ukbutton.onclick = (e) => {
        
     if( !email.value ||  !password.value || !Captcha.value ){
         ErorrBoxs.style.display = "flex"
-        ErorrText.innerHTML = "Fill in all InFo"
+        ErorrText.innerHTML = "You can not leave any fill entry"
         console.log("Eroo")
     }else{
+          spanner.style.display = "flex"
+          Log.style.display = "none"
         // console.log(data)
         fetch(url, {
             method: 'POST',
@@ -33,18 +37,31 @@ ukbutton.onclick = (e) => {
             body: JSON.stringify(data)
           })
             .then(response => response.json())
-            .then(result => {
-              console.log('Success:', result);
-            //   ErorrBoxs.style.display = "flex"
-            //   ErorrText.innerHTML = result.message
-            localStorage.setItem("userId", JSON.stringify(result._id))
+            .then((response) => {
+              console.log('Success:', response);
+              if(response.message === "User not found!"){
+                ErorrBoxs.style.display = "flex"
+                ErorrText.innerHTML = response.message
+                spanner.style.display = "none"
+                Log.style.display = "flex"
+              }else{
+                // ErorrText.innerHTML = "Good"
+              }
+            localStorage.setItem("userId", JSON.stringify(response._id))
             const userid =  JSON.parse(localStorage.getItem("userId"))
-            console.log(userid)
+            // console.log(result.message)
             window.location = `https://bestkryptfields.netlify.app/verify/${userid}`
-            }).catch(error => {
-                // ErorrBoxs.style.display = "flex"
-                // ErorrText.innerHTML = error.message
-            //   console.error('Error:', error);
-            });
+            }).catch((error) => {
+              console.error(`onRejected function called: ${error}`);
+            })
+            
+            
+            // .catch((e) => {
+            //   spanner.style.display = "none"
+            //   Log.style.display = "flex"
+            //     ErorrBoxs.style.display = "flex"
+            //     ErorrText.innerHTML = `${e.message}`
+            //   console.error('Error:', e);
+            // });
 }
 }
