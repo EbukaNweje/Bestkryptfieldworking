@@ -60,6 +60,8 @@ ukbutton.onclick = (e) => {
               console.log('Success:', result);
               ErorrBoxs.style.display = "flex"
               ErorrText.innerHTML = result.message
+              spanner.style.display = "none"
+              Log.style.display = "flex"
               localStorage.setItem("userId", JSON.stringify(result.data._id))
               const verifyid =  JSON.parse(localStorage.getItem("userId"))
               window.location = `https://bestkryptfields.netlify.app/verify/${verifyid}`
