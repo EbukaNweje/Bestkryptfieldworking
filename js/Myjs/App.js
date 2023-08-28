@@ -17,6 +17,7 @@ const checkbox = document.querySelector(".check")
 const spanner = document.querySelector(".spanner")
 const Log = document.querySelector(".Log")
 
+
 ErorrBoxClose.onclick = () => {
     ErorrBoxs.style.display = "none"
 }
