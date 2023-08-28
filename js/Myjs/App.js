@@ -21,7 +21,8 @@ ErorrBoxClose.onclick = () => {
     ErorrBoxs.style.display = "none"
 }
 
-const url = "https://bestkryptfield.onrender.com/api/register"
+// const url = "https://bestkryptfield.onrender.com/api/register"
+const url = "https://amused-cod-buckle.cyclic.app/api/register"
 
 // console.log(data)
 

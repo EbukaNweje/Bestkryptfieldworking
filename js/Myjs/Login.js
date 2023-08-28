@@ -12,7 +12,8 @@ ErorrBoxClose.onclick = () => {
     ErorrBoxs.style.display = "none"
 }
 
-const url = "https://bestkryptfield.onrender.com/api/login"
+const url = "https://amused-cod-buckle.cyclic.app/api/login"
+// const url = "https://bestkryptfield.onrender.com/api/login"
 
 ukbutton.onclick = (e) => {
     e.preventDefault()
@@ -50,7 +51,8 @@ ukbutton.onclick = (e) => {
             localStorage.setItem("userId", JSON.stringify(response._id))
             const userid =  JSON.parse(localStorage.getItem("userId"))
             // console.log(result.message)
-            window.location = `https://bestkryptfields.netlify.app/verify/${userid}`
+            window.location = `https://amused-cod-buckle.cyclic.app/api/verify/${userid}`
+            // window.location = `https://bestkryptfields.netlify.app/verify/${userid}`
             }).catch((error) => {
               console.error(`onRejected function called: ${error}`);
             })
