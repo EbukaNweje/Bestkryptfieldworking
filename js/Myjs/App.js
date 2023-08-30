@@ -25,8 +25,6 @@ ErorrBoxClose.onclick = () => {
 // const url = "https://bestkryptfield.onrender.com/api/register"
 const url = "https://bestkryptfield-back-end.vercel.app/api/register"
 
-// console.log(data)
-
 ukbutton.onclick = (e) => {
     e.preventDefault()
     const data = {
@@ -49,7 +47,6 @@ ukbutton.onclick = (e) => {
     }else{
       spanner.style.display = "flex"
       Log.style.display = "none"
-        // console.log(data)
         fetch(url, {
             method: 'POST',
             headers: {
