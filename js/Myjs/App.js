@@ -22,8 +22,8 @@ ErorrBoxClose.onclick = () => {
     ErorrBoxs.style.display = "none"
 }
 
-// const url = "https://bestkryptfield.onrender.com/api/register"
-const url = "https://bestkryptfield-back-end.vercel.app/api/register"
+const url = "https://bestkryptfieldback.onrender.com/api/register"
+// const url = "https://bestkryptfield-back-end-d6du.vercel.app/api/register"
 
 ukbutton.onclick = (e) => {
     e.preventDefault()
