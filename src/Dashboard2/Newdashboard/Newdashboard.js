@@ -22,14 +22,15 @@ const NewDashboard = () => {
 
 
 const [data, setData] = useState()
-console.log(setData())
+// console.log(setData())
   const {userid} = useParams()
   const url = `https://newbestkryptfieldbackend.onrender.com/api/userdata/${userid}`
 
   useEffect(() =>{
-    axios.get(url).then(res => setData(res))
+    axios.get(url).then(res => {console.log(res); setData()})
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [])
+
 
   console.log("This is the data",data)
 
