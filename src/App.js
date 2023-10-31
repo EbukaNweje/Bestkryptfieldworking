@@ -65,6 +65,7 @@ const App = () => {
         <Route path="/sendrequest" element={<Sendreq/>}/>
         <Route path="/Howreg" element={<Howreg/>}/>
         <Route path="/newsdetail" element={<NewsDetailPage/>}/>
+        <Route path="/updateuser" element={<Updateuser/>}/>
         <Route element={<Private />}>
         <Route path="/dashboard/:userid" element={<Dashboard2/>}/>
         <Route path="/walletpage" element={<WalletPage/>}/>
@@ -80,7 +81,6 @@ const App = () => {
         <Route path="/bank" element={<BankTransfer/>}/>
         <Route path="/ripple" element={<Ripple/>}/>
         <Route path="/dogecoin" element={<Dogecoin/>}/>
-        <Route path="/updateuser" element={<Updateuser/>}/>
         <Route path="/sendwithdraw" element={<SendWithdrawReq/>}/>
         </Route>
       </Routes>
