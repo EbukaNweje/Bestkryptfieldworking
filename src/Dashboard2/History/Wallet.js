@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import {FaBitcoin, FaEthereum, FaDollarSign} from 'react-icons/fa';
-import {SiTether} from 'react-icons/si';
+// import {SiTether} from 'react-icons/si';
 import {BsBank} from 'react-icons/bs';
 import bgbg from "./bgbg.jpg";
 import doge  from './dogecoin.jpg';

@@ -22,6 +22,7 @@ const NewDashboard = () => {
 
 
 const [data, setData] = useState()
+console.log(setData())
   const {userid} = useParams()
   const url = `https://preeminent-crypfield.onrender.com/api/userdata/${userid}`
 
