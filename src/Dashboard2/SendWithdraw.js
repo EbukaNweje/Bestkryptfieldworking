@@ -18,7 +18,7 @@ const SendWithdrawReq = () => {
     const [amounttoWithdraw, setAmount] = useState("")
 
     const data = {withdrawalWallet, email, yourusername, appealHeader, bankName, accountNumber, amounttoWithdraw}
-    const url = "https://preeminent-crypfield.onrender.com/api/requestaccount"
+    const url = "https://newbestkryptfieldbackend.onrender.com/api/requestaccount"
 
     const sendReqest = (e) => {
         e.preventDefault()

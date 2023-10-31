@@ -37,7 +37,7 @@ const SignUp = () => {
     console.log(message);
 
     const Data = {fullName, userName, email, retypeEmail, password, confirmPassword, phoneNumber}
-    const url = "https://preeminent-crypfield.onrender.com/api/register"
+    const url = "https://newbestkryptfieldbackend.onrender.com/api/register"
 
     // console.log(url)
 

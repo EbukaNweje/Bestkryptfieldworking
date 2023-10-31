@@ -16,7 +16,7 @@ const DogeCoin = () => {
 
 const [data, setData] = useState()
   const {userid} = useParams()
-  const url = `https://preeminent-crypfield.onrender.com/api/userdata/${userid}`
+  const url = `https://newbestkryptfieldbackend.onrender.com/api/userdata/${userid}`
 
   useEffect(() =>{
     axios.get(url).then(res => setData(res.data.data))

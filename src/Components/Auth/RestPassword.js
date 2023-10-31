@@ -26,7 +26,7 @@ const RestPassword = () => {
 
   console.log(message);
   
-  const url = `https://preeminent-crypfield.onrender.com/api/restLink/${userid}/${tokenid}`
+  const url = `https://newbestkryptfieldbackend.onrender.com/api/restLink/${userid}/${tokenid}`
 const Data = {password}
 console.log(url)
 console.log(Data)

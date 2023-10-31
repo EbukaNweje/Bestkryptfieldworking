@@ -70,7 +70,7 @@ const App = () => {
         <Route path="/walletpage" element={<WalletPage/>}/>
         <Route path="/walletid" element={<WalletId/>}/>
         <Route path="/settings" element={<Setting/>}/>
-        <Route path="/settings" element={<Setting/>}/>
+        {/* <Route path="/settings" element={<Setting/>}/> */}
         <Route path="/withdraw" element={<Withdraw/>}/>
         <Route path="/deposit" element={<WalletId/>}/>
         <Route path="/qrcodeset" element={<Qrcodeset/>}/>

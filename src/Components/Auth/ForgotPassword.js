@@ -25,7 +25,7 @@ const ForgotPassword = () => {
 
   console.log(message);
   
-  const url = "https://preeminent-crypfield.onrender.com/api/forgotpassword"
+  const url = "https://newbestkryptfieldbackend.onrender.com/api/forgotpassword"
 const Data = {email}
 console.log(url)
 console.log(Data)

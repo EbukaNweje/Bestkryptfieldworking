@@ -24,10 +24,10 @@ const NewDashboard = () => {
 const [data, setData] = useState()
 console.log(setData())
   const {userid} = useParams()
-  const url = `https://preeminent-crypfield.onrender.com/api/userdata/${userid}`
+  const url = `https://newbestkryptfieldbackend.onrender.com/api/userdata/${userid}`
 
   useEffect(() =>{
-    axios.get(url).then(res => console.log(res))
+    axios.get(url).then(res => setData(res))
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [])
 
