@@ -27,7 +27,7 @@ const [data, setData] = useState()
   const url = `https://newbestkryptfieldbackend.onrender.com/api/userdata/${userid}`
 
   useEffect(() =>{
-    axios.get(url).then(res => {console.log(res); setData()})
+    axios.get(url).then(res => {console.log(res.data.data); setData(res.data.data)})
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [])
 
