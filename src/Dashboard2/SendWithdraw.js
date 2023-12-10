@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 import bgbg from './bgbg.jpg';
 import {AiFillHome} from 'react-icons/ai'
 // import Axios from "axios";
@@ -22,8 +22,11 @@ const SendWithdrawReq = () => {
 
 
     const Fail = () => {
-        alert("You can withdraw at this moment you must $10,000 above so you’ll reach the withdrawal limit.")
-        window.location.reload()
+        Swal.fire({
+             icon: 'error',
+             title: 'Error',
+            text: "You can withdraw at this moment you must $10,000 above so you’ll reach the withdrawal limit.",
+            }) 
     }
     
 
