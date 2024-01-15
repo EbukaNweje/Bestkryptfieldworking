@@ -46,7 +46,7 @@ const App = () => {
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path='/' element={<Scame/>}/>
+        <Route path='/' element={<Landing/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/forgotpassword' element={<ForgotPassword/>}/>
         <Route path='/restLink/:userid/:tokenid' element={<RestPassword/>}/>
