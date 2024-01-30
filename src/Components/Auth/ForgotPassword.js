@@ -48,7 +48,7 @@ const Login = (e) => {
       }, [2000]);
     })
     .catch((error)=>{
-        console.log(error.response)
+        console.log(error)
       /* setMessage({error: false, msg: error.response.data.message}); */
     setLoading(false)
     Swal.fire({
