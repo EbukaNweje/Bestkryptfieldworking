@@ -19,6 +19,7 @@ const NewDashboard = () => {
     value: "https://bestkryptfield.org/",
     copied: false,
   });
+  const [exchangeRate, setExchangeRate] = useState(null);
 
 
 const [data, setData] = useState()
@@ -30,6 +31,34 @@ const [data, setData] = useState()
     axios.get(url).then(res => {console.log(res.data.data); setData(res.data.data)})
     /* eslint-disable-next-line react-hooks/exhaustive-deps */
   }, [])
+
+  useEffect(() => {
+    // Fetch the current exchange rate from an API (replace with a reliable API)
+    axios
+        .get("https://api.coindesk.com/v1/bpi/currentprice.json")
+        .then((response) => {
+            const rate = response.data.bpi.USD.rate.replace(",", ""); // assuming USD rate
+            setExchangeRate(parseFloat(rate));
+        })
+        .catch((error) => {
+            console.error("Error fetching exchange rate:", error);
+        });
+}, []); // Empty dependency array ensures useEffect runs only once on component mount
+
+const bitcoinValue = data?.depositWalletbalance / exchangeRate;
+const bitcoinValue2 = data?.interestWalletbalance / exchangeRate;
+const bitcoinValue3 = data?.totalInvest / exchangeRate;
+const bitcoinValue4 = data?.totalDeposit / exchangeRate;
+const bitcoinValue5 = data?.totalWithdraw / exchangeRate;
+const bitcoinValue6 = data?.lastWithdrawal / exchangeRate;
+const bitcoinValue7 = data?.ref / exchangeRate;
+const roundedNumber = parseFloat(bitcoinValue.toFixed(8));
+const roundedNumber2 = parseFloat(bitcoinValue2.toFixed(8));
+const roundedNumber3 = parseFloat(bitcoinValue3.toFixed(8));
+const roundedNumber4 = parseFloat(bitcoinValue4.toFixed(8));
+const roundedNumber5 = parseFloat(bitcoinValue5.toFixed(8));
+const roundedNumber6 = parseFloat(bitcoinValue6.toFixed(8));
+const roundedNumber7 = parseFloat(bitcoinValue7.toFixed(8));
 
 
   console.log("This is the data",data)
@@ -67,6 +96,7 @@ const [data, setData] = useState()
             <Left>
               <Title>Deposit Wallet Balance</Title>
               <Price>${data?.depositWalletbalance}.00</Price>
+              <span style={{fontSize: "15px", color: "white"}}>{roundedNumber}</span>
             </Left>
             <Right>
               <AiOutlineDollar style={{width: 45, height: 45, color: "#BF2024"}}/>
@@ -76,6 +106,7 @@ const [data, setData] = useState()
             <Left>
               <Title>Total Earned</Title>
               <Price>${data?.interestWalletbalance}.00</Price>
+              <span style={{fontSize: "15px", color: "white"}}>{roundedNumber2}</span>
             </Left>
             <Right>
               <AiOutlineWallet style={{width: 45, height: 45, color: "#BF2024"}}/>
@@ -85,6 +116,7 @@ const [data, setData] = useState()
             <Left>
               <Title>Total Invest</Title>
               <Price>${data?.totalInvest}.00</Price>
+              <span style={{fontSize: "15px", color: "white"}}>{roundedNumber3}</span>
             </Left>
             <Right>
               <AiOutlineCodeSandbox style={{width: 45, height: 45, color: "#BF2024"}}/>
@@ -94,6 +126,7 @@ const [data, setData] = useState()
             <Left>
               <Title>Total Deposit</Title>
               <Price>${data?.totalDeposit}.00</Price>
+              <span style={{fontSize: "15px", color: "white"}}>{roundedNumber4}</span>
             </Left>
             <Right>
               <AiOutlineCreditCard style={{width: 45, height: 45, color: "#BF2024"}}/>
@@ -103,6 +136,7 @@ const [data, setData] = useState()
             <Left>
               <Title>Total Withdrawal</Title>
               <Price>${data?.totalWithdraw}.00</Price>
+              <span style={{fontSize: "15px", color: "white"}}>{roundedNumber5}</span>
             </Left>
             <Right>
               <AiOutlineCloud style={{width: 45, height: 45, color: "#BF2024"}}/>
@@ -112,6 +146,7 @@ const [data, setData] = useState()
             <Left>
               <Title>Last Withdrawal</Title>
               <Price>${data?.lastWithdrawal}.00</Price>
+              <span style={{fontSize: "15px", color: "white"}}>{roundedNumber6}</span>
             </Left>
             <Right>
               <AiOutlineCloud style={{width: 45, height: 45, color: "#BF2024"}}/>
@@ -121,6 +156,7 @@ const [data, setData] = useState()
             <Left>
               <Title>Referral earnings</Title>
               <Price>${data?.ref}</Price>
+              <span style={{fontSize: "15px", color: "white"}}>{roundedNumber7}</span>
             </Left>
             <Right>
               <AiFillProfile style={{width: 45, height: 45, color: "#BF2024"}}/>
