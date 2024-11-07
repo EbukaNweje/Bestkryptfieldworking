@@ -9,6 +9,8 @@ import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { VscAccount } from 'react-icons/vsc'
 import NewDashboard from './Newdashboard/Newdashboard'
 import {Link} from 'react-router-dom'
+import {MdAddTask} from 'react-icons/md'
+
 // import Settings from './Setting/Setting'
 // import History from './History/Wallet'
 // import Withdraw from './Withdraw/Withdraw'
@@ -19,6 +21,7 @@ import {Link} from 'react-router-dom'
 // import Qrcodeset from './Setting/Qrcodeset'
 
 const Dashboard2 = () => {
+  const user =  JSON.parse(localStorage.getItem('User'))
   return (
     <Container>
         <Wrapper>
@@ -47,6 +50,13 @@ const Dashboard2 = () => {
         <GiShakingHands style={{width: 30, height: 30, color: "silver"}}/>
         <Title>Confirm Orders</Title>
       </Hold>
+      {
+            user.status?  <Hold to='/updateuser'>
+              <MdAddTask style={{width: 30, height: 30, color: "silver"}}/>
+                <Title>Update User</Title>
+            </Hold>: null
+      }
+     
       {/* <Hold to='/updateuser'>
         <GiShakingHands style={{width: 30, height: 30, color: "silver"}}/>
         <Title>Update User</Title>
