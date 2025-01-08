@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import { 
-    // AiFillCopy,
      AiOutlineCloud, AiOutlineCreditCard, AiOutlineDollar, AiOutlineWallet} from 'react-icons/ai'
 import {AiFillHome, AiFillProfile, AiOutlineCodeSandbox} from 'react-icons/ai'
 // import usdt from './
